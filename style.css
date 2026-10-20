@@ -1,0 +1,87 @@
+body {
+    background-color: #121212;
+    color: white;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    gap: 15px;
+    margin: 0;
+    padding: 30px 0;
+}
+
+h1 {
+    color: #39ff14;
+    font-size: 36px;
+    margin-bottom: 5px;
+}
+
+p {
+    font-size: 16px;
+    color: #cccccc;
+}
+
+#restart {
+    background-color: #39ff14;
+    color: #121212;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+#board {
+    width: 400px;
+    height: 400px;
+    background-color: #1e1e1e;
+    border: 2px solid #39ff14;
+    display: grid;
+    grid-template-columns: repeat(20, 1fr);
+    grid-template-rows: repeat(20, 1fr);
+}
+
+#board div {
+    background-color: #252525;
+    border: 1px solid #333;
+}
+
+.snake {
+    background-color: #39ff14 !important;
+    border-radius: 4px;
+}
+
+.snake-head {
+    background-color: #ffffff !important;
+    border-radius: 4px;
+}
+
+#game-message {
+    font-size: 28px;
+    color: #ff4444;
+    margin: 0;
+    min-height: 34px;
+}
+
+.snake-head {
+    position: relative;
+}
+
+.snake-head::before,
+.snake-head::after {
+    content: "";
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: #121212;
+    border-radius: 50%;
+    top: 4px;
+}
+
+.snake-head::before {
+    left: 4px;
+}
+
+.snake-head::after {
+    right: 4px;
+}
